@@ -1,7 +1,12 @@
 package com.mudstock;
 
+import java.util.Scanner;
+
 public class Principal {
 	public static void main(String[] args) {
-		System.out.println("hello word");
+		 Scanner s =new  Scanner(System.in);
+	        
+	        
+	     Funcionario func = new Funcionario();
 	}
 }
