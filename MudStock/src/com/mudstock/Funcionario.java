@@ -12,21 +12,74 @@ public class Funcionario {
 	
 	}
 	
-	public Funcionario Registrar(String nome, String nomeuser, String email, int senha,String datanasc) {
-		this.nome = nome;
-		this.nomeUser = nomeuser;
-		this.email = email;
-		this.senha = senha;
-		this.dataNasc = datanasc;
+	public Funcionario inserir() {
+		DB c = new DB();
+		
+		String sql = "Insert into Funcionario (nome,datanascimento,nomeuser,email,senha) values('" 
+				+ nome + "', '" + nomeUser + "', '" + email + "', " + senha + ")";
+		c.Comando(sql);
+		
 		return null;
 	}
-	public Funcionario Alterar(int Id, String nomeuser, Funcionario list) {
-		return list;
+	public Funcionario alterar(int Id, String nomeuser, Funcionario list) {
+		return null;
 	}
-	public Funcionario Buscar(int Id, String nomeuser, Funcionario list) {
-		return list;
+	public Funcionario buscar(int Id, String nomeuser, Funcionario list) {
+		return null;
 	}
-	public Funcionario Excluir(int Id, String nomeuser, Funcionario list) {
-		return list;
+	public Funcionario excluir(int Id, String nomeuser, Funcionario list) {
+		return null;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNomeUser() {
+		return nomeUser;
+	}
+
+	public void setNomeUser(String nomeUser) {
+		this.nomeUser = nomeUser;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getSenha() {
+		return senha;
+	}
+
+	public void setSenha(int senha) {
+		this.senha = senha;
+	}
+
+	public String getDataNasc() {
+		return dataNasc;
+	}
+
+	public void setDataNasc(String dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
+
 }
+	
+
