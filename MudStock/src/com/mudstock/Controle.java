@@ -13,15 +13,28 @@ public class Controle {
 		
 	}
 	public Controle Registrar() {
+		DB c = new DB();
+		
+		String sql = "Insert into Controle (entrada,saida,valorpago,quantidade,dataentrada,datasaida) values('" 
+				+ entrada + "', '" + saida + "', '" + valorPago + "','" + quantidade + "','" + dataEntrada + "','" + dataSaida + "')";
+		c.Comando(sql);
 		return null;
 	}
-	public Controle Alterar() {
+	public Controle Alterar(int id, String coluna, String var) {
+		DB c = new DB();
+		
+		String sql = "Update Controle set "+coluna+"='"+var+" where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public Controle Buscar() {
 		return null;
 	}
-	public Controle Excluir() {
+	public Controle Excluir(int id) {
+		DB c = new DB();
+		
+		String sql = "Delete from Controle where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public int getId() {

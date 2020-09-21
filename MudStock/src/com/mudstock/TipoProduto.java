@@ -9,15 +9,28 @@ public class TipoProduto {
 		
 	}
 	public TipoProduto Registrar() {
+		DB c = new DB();
+		
+		String sql = "Insert into TipoProduto (nome,situacao) values('" 
+				+ nome + "', '" + situacao + ")";
+		c.Comando(sql);
 		return null;
 	}
-	public TipoProduto Alterar() {
+	public TipoProduto Alterar(int id, String coluna, String var) {
+		DB c = new DB();
+		
+		String sql = "Update TipoProduto set "+coluna+"='"+var+" where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public TipoProduto Buscar() {
 		return null;
 	}
 	public TipoProduto Excluir() {
+		DB c = new DB();
+		
+		String sql = "Delete from TipoProduto where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public int getId() {

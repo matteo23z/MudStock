@@ -1,11 +1,13 @@
 package com.mudstock;
 
+import java.sql.ResultSet;
+
 public class Funcionario {
 	private int id;
 	private String nome;
 	private String nomeUser;
 	private String email;
-	private int senha;
+	private String senha;
 	private String dataNasc;
 	
 	public Funcionario() {
@@ -18,16 +20,41 @@ public class Funcionario {
 		String sql = "Insert into Funcionario (nome,datanascimento,nomeuser,email,senha) values('" 
 				+ nome + "', '" + nomeUser + "', '" + email + "', " + senha + ")";
 		c.Comando(sql);
+		return null;
+	}
+	public Funcionario alterar(int id, String coluna, String var) {
+		DB c = new DB();
 		
+		String sql = "Update Funcionario set "+coluna+"='"+var+" where id="+id;
+		c.Comando(sql);
 		return null;
 	}
-	public Funcionario alterar(int Id, String nomeuser, Funcionario list) {
-		return null;
+	public void buscarAll() {
+		DB c = new DB();
+		String sql = "Select * from Funcionario";
+		ResultSet rs = c.Select(sql);
+		
+		try {
+			System.out.println("ID - NOME - DATANACIMENTO - USER - EMAIL - SENHA");
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String nome = rs.getString("nome");
+				String datanasc = rs.getString("datanacimento");
+				String user = rs.getString("nomeuser");
+				String email = rs.getString("email");
+				int sen = rs.getInt("senha");
+				System.out.println(id+" - "+nome+" - "+datanasc+" - "+user+" - "+email+" - "+sen);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	public Funcionario buscar(int Id, String nomeuser, Funcionario list) {
-		return null;
-	}
-	public Funcionario excluir(int Id, String nomeuser, Funcionario list) {
+	public Funcionario excluir(int Id) {
+		DB c = new DB();
+		
+		String sql = "Delete from Funcionario where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 
@@ -63,11 +90,11 @@ public class Funcionario {
 		this.email = email;
 	}
 
-	public int getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(int senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 

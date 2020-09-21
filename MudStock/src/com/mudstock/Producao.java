@@ -13,15 +13,28 @@ public class Producao {
 		
 	}
 	public Producao Registrar() {
+		DB c = new DB();
+		
+		String sql = "Insert into Producao (nome,datainicial,datafinal,quantidade,status,obs) values('" 
+				+ nome + "', '" + dataInicial + "', '" + dataFinal + "', " + quantidade + "', " + status + "','" + obs + "')";
+		c.Comando(sql);
 		return null;
 	}
-	public Producao Alterar() {
+	public Producao Alterar(int id, String coluna, String var) {
+		DB c = new DB();
+		
+		String sql = "Update Producao set "+coluna+"='"+var+" where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public Producao Buscar() {
 		return null;
 	}
-	public Producao Excluir() {
+	public Producao Excluir(int id) {
+		DB c = new DB();
+		
+		String sql = "Delete from Producao where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public int getId() {

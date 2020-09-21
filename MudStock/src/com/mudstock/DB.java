@@ -49,7 +49,6 @@ public class DB {
 
 		try{
 			st.executeUpdate(sql);
-			JOptionPane.showMessageDialog(null,"Código realizado com sucesso");
 		}
 
 		catch(Exception e){
@@ -61,7 +60,6 @@ public class DB {
 	public ResultSet Select(String sql){
 		try{
 			rs = st.executeQuery(sql);
-			JOptionPane.showMessageDialog(null,"Código realizado com sucesso");
 
 		}
 		catch(Exception e){

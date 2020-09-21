@@ -12,15 +12,28 @@ public class Estoque {
 		
 	}
 	public Estoque Registrar(int id, String nome, String data, int quantidade,float tamanho, String obs) {
+		DB c = new DB();
+		
+		String sql = "Insert into Estoque (nome,data,qunatidade,tamanho,obs) values('" 
+				+ nome + "', '" + data + "', '" + quantidade + "', " + tamanho + "', '" + obs + "')";
+		c.Comando(sql);
 		return null;
 	}
-	public Estoque Alterar(int Id, String nome) {
+	public Estoque Alterar(int id, String coluna, String var) {
+		DB c = new DB();
+		
+		String sql = "Update Funcionario set "+coluna+"='"+var+" where id="+id;
+		c.Comando(sql);
 		return null;
 	}
-	public Estoque Buscar(int Id, String nome) {
+	public Estoque Buscar() {
 		return null;
 	}
-	public Estoque Excluir(int Id, String nome) {
+	public Estoque Excluir(int id) {
+		DB c = new DB();
+		
+		String sql = "Delete from Funcionario where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public int getId() {

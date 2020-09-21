@@ -9,8 +9,9 @@ public class Principal {
 		
 		DB conx = new DB();
 		
-		String nome, user, email, data;
-		int sen;
+		login log = new login();
+		
+		String nome, user, email, data, sen;
 		int n = 0, v = 0;
 		while (n==0) {
 			System.out.println("-------------------------------");
@@ -29,15 +30,14 @@ public class Principal {
 					System.out.println("Digite user: ");
 					user = scan.next();
 					System.out.println("Digite Senha: ");
-					sen = scan.nextInt();
-					//if (user(func.getNome())) {
-						///if(sen == func.getSenha()){
-						//	n=1;
-					//	}else {
-					//	}
-					//}else{
-					//	System.out.println("Usuario não cadastrado");
-					//}
+					sen = scan.next();
+					if(func.buscarLogin(user,sen)) {
+						n = 1;
+						System.out.println("Logado com sucesso");
+					}
+					else {
+						System.out.println("Usurario ou senha não existe");
+					}
 				break;
 				case 2:
 					System.out.println("-------------------------------");
@@ -52,7 +52,7 @@ public class Principal {
 					System.out.println("Digite user: ");
 					func.setNomeUser(scan.next());
 					System.out.println("Digite Senha: ");
-					func.setSenha(scan.nextInt());
+					func.setSenha(scan.next());
 					
 					func.inserir();
 				break;
@@ -72,9 +72,10 @@ public class Principal {
 			v = scan.nextInt();
 			switch(v) {
 			case 1:
+				func.buscarAll();
 				System.out.println("Alterar");
 				System.out.println("Digite nome: ");
-				nome = scan.next();
+				scan.next(func.getNome());
 				System.out.println("Digite email: ");
 				email = scan.next();
 				System.out.println("Digite data nascimento: ");
@@ -82,7 +83,7 @@ public class Principal {
 				System.out.println("Digite user: ");
 				user = scan.next();
 				System.out.println("Digite Senha: ");
-				sen = scan.nextInt();
+				sen = scan.next();
 				
 				//func.inserir(nome, user, email, sen, data);
 			break;

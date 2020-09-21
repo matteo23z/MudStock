@@ -14,15 +14,28 @@ public class Cliente {
 	}
 	
 	public Cliente Registrar() {
+		DB c = new DB();
+		
+		String sql = "Insert into Cliente (nome,email,rg,cpf,telefone,situacao) values('" 
+				+ nome + "', '" + email + "', '" + rg + "', " + cpf + "', '" + telefone + "', '" + situacao +  "')";
+		c.Comando(sql);
 		return null;
 	}
-	public Cliente Alterar() {
+	public Cliente Alterar(int id, String coluna, String var) {
+		DB c = new DB();
+		
+		String sql = "Update Cliente set "+coluna+"='"+var+" where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 	public Cliente Buscar() {
 		return null;
 	}
-	public Cliente Excluir() {
+	public Cliente Excluir(int id) {
+		DB c = new DB();
+		
+		String sql = "Delete from  where id="+id;
+		c.Comando(sql);
 		return null;
 	}
 
