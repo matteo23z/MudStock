@@ -3,7 +3,7 @@
 ![mudstock logo](https://user-images.githubusercontent.com/69529755/101160473-dd49ad00-360d-11eb-8811-c1f32bac850f.png)
 
 ## Informações
-- Projeto do Curso de Análise e Desenvolvimento de Sistemas da Universade São Fancisco (USF) de Itatiba - SP;
+- Projeto do Curso de Análise e Desenvolvimento de Sistemas da Universidade  São Francisco (USF) de Itatiba - SP;
 - Disciplina: Prática Profissional - Projeto e Desenvolvimento de Software;
 - Monitorado pelo Professor Matias Filho;
 - Criado por Matteo Figueiredo da Silva;
@@ -21,7 +21,7 @@ e coletar e analisar os dados com mais facilidade.
 - Metodologia Ágil com Trello.
 
 ## Como funciona:
-Os funcionarios irão se cadastrar e realizar o login, coom isso feito eles podem acessar as tudas parte do sistema o Estoque e a Proução, assim eles irão administrar os produtos inseridos no estoque, com seus respectivos dados de quantidade, informações do produto,sua data de atualização e o controle de entrada e saida. Com isso a parte que administra a produção poderá pegar os produtos que são mudas inseridos no estoque, para criar uma produção e realizar o controle delas com registros que vão anotar a data, observações e os acontecimentos durante as produções, por exemplo: se houve irrgação, até que ela receba o status de finalizado. Os registros podem ser criadas no tempo necessária não possui uma regra específica.
+Os funcionários irão se cadastrar e realizar o login, com isso feito eles podem acessar as tudas parte do sistema o Estoque e a Produção, assim eles irão administrar os produtos inseridos no estoque, com seus respectivos dados de quantidade, informações do produto,sua data de atualização e o controle de entrada e saída. Com isso a parte que administra a produção poderá pegar os produtos que são mudas inseridos no estoque, para criar uma produção e realizar o controle delas com registros que vão anotar a data, observações e os acontecimentos durante as produções, por exemplo: se houve irrigação, até que ela receba o status de finalizado. Os registros podem ser criadas no tempo necessária não possui uma regra específica.
 
 ![Tela Estoque](https://user-images.githubusercontent.com/69529755/101167493-bba1f300-3618-11eb-8dc3-7583587131f7.PNG)
 ![Produção e registro](https://user-images.githubusercontent.com/69529755/101167553-cfe5f000-3618-11eb-8b11-8c9492902a25.PNG)
@@ -32,12 +32,13 @@ Os funcionarios irão se cadastrar e realizar o login, coom isso feito eles pode
 - Rever código para buscar mais melhorias
 
 ### Usabilidade
-- Impletar janelas de dialogo com o usuário;
-- Criação da tela do perfil do usuário para realizar altereações na conta;
+- Implementar janelas de diálogo com o usuário;
+- Criação da tela do perfil do usuário para realizar alterações na conta;
 - Criação da tela de clientes para administrar os clientes do viveiro;
-- Criação da tela de controle de estoque para administrar saida e entrega dos produtos;
+- Criação da tela de controle de estoque para administrar saída e entrega dos produtos;
 - Terminar de implementar as barras de busca do projeto;
-- Terminar de implementar filtro nas barras de busca;
+- Terminar de implementar filtro nas barras de busca.
+
 
 ### Design
 - Melhorar interfaces das telas;
