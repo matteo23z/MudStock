@@ -10,15 +10,14 @@
 
 ## Objetivo
 Criação de um sistema que tem como a finalidade de gerenciar o controle de estoque 
-e produção de um viveiro de mudas, para ter um desenvolvimento melhor no trabalho dos funcionários
-e coletar e analisar os dados com mais facilidade.
+e produção de um viveiro de mudas, para ter um desenvolvimento melhor no trabalho dos funcionários, coletar e analisar os dados com mais facilidade.
 
 ## Tecnologias
 - Linguagem: Java;
 - Interface feita em JavaSwing;
 - Codificador: Eclipse;
 - Banco de Dados: SQL Server;
-- Metodologia Ágil com Trello.
+- Metodologia ágil com Trello.
 
 ## Como funciona:
 Os funcionários irão se cadastrar e realizar o login, com isso feito eles podem acessar todas as partes do sistema que são: Estoque e a Produção. Eles irão administrar os produtos inseridos no estoque, com seus respectivos dados de quantidade, informações do produto,sua data de atualização e o controle de entrada e saída. 
